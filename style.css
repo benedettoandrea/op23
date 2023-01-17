@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* position, dimensions */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* behavioral settings */
+  overflow: hidden;
+  /* styles, colours */
+  background-color: var(--bg);
+  /* fonts */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.loadingclass {
+  /* position, dimensions */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* behavioral settings */
+  overflow: hidden;
+  /* styles, colours */
+  background-color: transparent;
+}
+
+#container {
+  /* position, dimensions */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* behavioral settings */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  /* position, dimensions */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0px;
+  padding: 10px;
+  /* styles, colours */
+  background: transparent;
+}
+
+.footer {
+  /* position, dimensions */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0px;
+  padding: 10px;
+  /* styles, colours */
+  background: transparent;
+}
+
+.description {
+  /* position, dimensions */
+  border: none;
+  padding: 5px;
+  /* styles, colours */
+  background: transparent;
+  color: var(--text);
+  /* fonts */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: small;
+  text-align: left;
+}
+
+.item {
+  /* position, dimensions */
+  border: none;
+  padding: 5px;
+  /* behavioral settings */
+  cursor: pointer;
+  /* styles, colours */
+  background: transparent;
+  color: var(--text);
+  /* fonts */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: small;
+  text-align: left;
+}
+
+/* responsiveness */
+@media only screen and (max-device-width: 480px) {
+  .footer {
+    /* behavioral settings */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+  }
+}
+
+/* themes */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+.light {
+  --bg: var(--white);
+  --text: var(--black);
+}
+
+.dark {
+  --bg: var(--black);
+  --text: var(--white);
+}
