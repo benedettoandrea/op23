@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
   <head>
     <!--meta tags-->
     <meta charset="utf-8" />
@@ -7,17 +7,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
-    <meta name="theme-color" content="#ffffff" class="light" />
+    <meta name="theme-color" content="#000000" />
     <!--title-->
-    <title>animated texture</title>
+    <title>op23 background generator</title>
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!--p5 libraries-->
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
-    <!--theming script-->
-    <script src="theme.js"></script>
     <!--p5 script-->
     <script src="sketch.js"></script>
   </head>
@@ -26,37 +24,16 @@
     <div id="container">
       <div class="header">
         <div class="description">
-          <span>drag around to rotate the tiles</span>
+          <span>click start/pause recording to render the frames</span>
         </div>
       </div>
       <div class="footer">
-        <button id="AddHeight" class="item" onclick="AddHeight()">
-          <span>add row</span>
-        </button>
-        <button id="RemHeight" class="item" onclick="RemHeight()">
-          <span>remove row</span>
-        </button>
-        <button id="AddWidth" class="item" onclick="AddWidth()">
-          <span>add column</span>
-        </button>
-        <button id="RemWidth" class="item" onclick="RemWidth()">
-          <span>remove column</span>
-        </button>
-        <button id="randomPalette" class="item" onclick="randomPalette()">
-          <span>change colour palette</span>
-        </button>
         <button
-          id="toggleTheme"
+          id="startPauseRecording"
           class="item"
-          onclick="togglePageTheme();toggleP5Theme()"
+          onclick="startPauseRecording()"
         >
-          <span>switch theme</span>
-        </button>
-        <button id="startStop" class="item" onclick="startStop()">
-          <span>start/stop</span>
-        </button>
-        <button id="saveScreenshot" class="item" onclick="saveScreenshot()">
-          <span>save a screenshot</span>
+          <span>start/pause recording</span>
         </button>
       </div>
     </div>
