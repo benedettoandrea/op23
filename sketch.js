@@ -8,7 +8,7 @@ let seed = 45;
 let octaves = 64;
 let falloff = 0.5;
 let noiseScale = 0.0075;
-let diameter = 100;
+let diameter = 813;
 
 function setup() {
   createCanvas(504, 813).parent("container");
@@ -73,7 +73,15 @@ function render(percent) {
       }
     }
     updatePixels();
-    saveCanvas("sequence_" + frameCounter, "png");
+    if (frameCounter < 100) {
+      if (frameCounter < 10) {
+        saveCanvas("sequence_" + "00" + frameCounter, "png");
+      } else {
+        saveCanvas("sequence_" + "0" + frameCounter, "png");
+      }
+    } else if (frameCounter >= 100) {
+      saveCanvas("sequence_" + frameCounter, "png");
+    }
   } else {
     noLoop();
   }
